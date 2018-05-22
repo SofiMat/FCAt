@@ -7,14 +7,14 @@ using System.IO;
 using System.Drawing;
 using System.Net;
 using System.Text;
-using FilmDatabase.Filters;
+using Film.Filters;
 using Microsoft.AspNetCore.Mvc;
 using Film.Data;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using System.Threading.Tasks;
 
-namespace FilmDatabase.Controllers
+namespace Film.Controllers
 {
     [Culture]
     public class AdminController : Controller

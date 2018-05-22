@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using System.Web;
 using Film.Data;
 using Film.Models;
-using FilmDatabase.Filters;
+using Film.Filters;
 using Microsoft.AspNetCore.Mvc;
 
-namespace FilmDatabase.Controllers
+namespace Film.Controllers
 {
     [Culture]
     public class NavigationController : Controller

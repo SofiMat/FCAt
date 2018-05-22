@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Film.Models;
-using FilmDatabase.Filters;
+using Film.Filters;
 using Film.Data;
 using System.Collections.Generic;
 using System;

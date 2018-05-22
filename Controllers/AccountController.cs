@@ -13,7 +13,7 @@ using Microsoft.Extensions.Options;
 using Film.Models;
 using Film.Models.AccountViewModels;
 using Film.Services;
-using FilmDatabase.Filters;
+using Film.Filters;
 
 namespace Film.Controllers
 {

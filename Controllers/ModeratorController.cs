@@ -7,7 +7,7 @@ using System.IO;
 using System.Drawing;
 using System.Net;
 using System.Text;
-using FilmDatabase.Filters;
+using Film.Filters;
 using Film.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;

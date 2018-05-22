@@ -5,7 +5,7 @@ using System.Threading;
 using System.Web;
 using Microsoft.AspNetCore.Mvc.Filters;
 
-namespace FilmDatabase.Filters
+namespace Film.Filters
 {
     public class CultureAttribute : ActionFilterAttribute
     {
