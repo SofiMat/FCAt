@@ -16,10 +16,10 @@ namespace Film.Data
         {
         }
 
-        public DbSet<Movie> Films { get; set; }
-        public DbSet<Category> Categories { get; set; }
-        public DbSet<Comment> Comments { get; set; }
-        public DbSet<Mark> Marks { get; set; }
+        public virtual DbSet<Movie> Films { get; set; }
+        public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<Comment> Comments { get; set; }
+        public virtual DbSet<Mark> Marks { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

@@ -47,8 +47,8 @@
     <div class="form-group">
         @Html.LabelFor(m => m.Director, new { @class = "control-label col-md-2" })
         <div class="col-md-8">
-            @Html.TextBoxFor(m => m.Director, new { @class = "form-control" })
-            @Html.ValidationMessageFor(m => m.Director, "", new { @class = "text-danger", @placeholder = "Введіть режисера" })
+            @Html.TextBoxFor(m => m.Director, new { @class = "form-control", @placeholder = "Введіть режисера" })
+            @Html.ValidationMessageFor(m => m.Director, "", new { @class = "text-danger",  })
         </div>
     </div>
     <div class="form-group">
