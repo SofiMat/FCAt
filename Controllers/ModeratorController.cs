@@ -49,7 +49,7 @@ namespace Film.Controllers
         }
         [Authorize(Roles = "moderator")]
         [HttpPost, ActionName("DeleteComment")]
-        public ActionResult DeleteCommentConfirmed(int id)
+        public ActionResult DeleteCommentConfirmed(int id)//test
         {
             var c = _context.Comments.Find(id);
 
@@ -142,7 +142,7 @@ namespace Film.Controllers
         }
         [HttpPost, ActionName("Delete")]
         [Authorize(Roles = "moderator")]
-        public ActionResult DeleteConfirmed(int id)
+        public ActionResult DeleteConfirmed(int id)//test
         {
             var f = _context.Films.Find(id);
             if (f == null)

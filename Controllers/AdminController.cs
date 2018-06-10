@@ -39,7 +39,7 @@ namespace Film.Controllers
         }
 
         [Authorize(Roles = "admin")]
-        public async Task<ActionResult> Ban(string id)
+        public async Task<ActionResult> Ban(string id)//test
         {
             var user = await _userManager.FindByIdAsync(id);
 
@@ -57,7 +57,7 @@ namespace Film.Controllers
         }
 
         [Authorize(Roles = "admin")]
-        public async Task<ActionResult> PromoteToRole(string id, string role)
+        public async Task<ActionResult> PromoteToRole(string id, string role)//test
         {
           //  var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext()));
             

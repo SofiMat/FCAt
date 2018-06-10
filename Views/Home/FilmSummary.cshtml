@@ -1,27 +1,41 @@
 ﻿@model Film.Models.Movie
+
 <div class="row">
-    <h2>@Html.ActionLink(Model.Name, "Details", new { id = Model.Id })</h2>
-    @if (Model.Image != null)
-    {
-        @Html.Raw(String.Format("<img style='width:{0}px;float:left; height:{1}px;' src=\"data:image/png;base64,"
-                                                    + Convert.ToBase64String(Model.Image) + "\" />", 200, 300))
+    <div class="panel panel-default">
+        <div class="panel-heading" style="font-size: 30px; color:darkgreen;">
 
-    }
+            @Html.ActionLink(Model.Name, "Details", new { id = Model.Id })
+        </div>
+        <div class="panel-body">
+            <div class="col-sm-4">
+                @if (Model.Image != null)
+                {
+                    @Html.Raw(String.Format("<img style='width:{0}px;float:left; height:{1}px;' src=\"data:image/png;base64,"
+                                       + Convert.ToBase64String(Model.Image) + "\" />", 200, 300))
 
-    @if (Model.Image == null)
-    {
-        <div class="user-photo"></div>
-    }
-    Жанр:
-    @foreach (var c in Model.Categories)
-    {
-        @c.Category.Name<text>,</text>
-    }.
-    <br>
-    @Html.DisplayFor(modelItem => Model.Description)
-    <p>Режисер: @(Model.Director)</p>
-    <p>Сценарист: @(Model.Scenario)</p>
-    <p>Тип сценарію: @(Model.ScenarioType)</p>
+                }
+
+            </div>
+
+            @if (Model.Image == null)
+            {
+            }
+            <div class="col-sm-8">
+                <b>Жанр:</b>
+                @foreach (var c in Model.Categories)
+                {
+                    @c.Category.Name<text>,</text>
+                }.
+                <br>
+                @Html.DisplayFor(modelItem => Model.Description)
+                <p><b>Режисер:</b> @(Model.Director)</p>
+                <p><b>Сценарист:</b> @(Model.Scenario)</p>
+                <p><b>Тип сценарію:</b> @(Model.ScenarioType)</p>
+                
+            </div>
+        </div>
+    </div>
 </div>
+<br />
 
 <br />

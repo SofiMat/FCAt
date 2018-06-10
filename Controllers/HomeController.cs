@@ -25,7 +25,7 @@ namespace Film.Controllers
         }
 
         [HttpPost]
-        public IActionResult Search([FromForm]SearchModel searchModel)
+        public IActionResult Search([FromForm]SearchModel searchModel)//4 tests
         {
             return RedirectToAction("Index", new {search = searchModel.Search, director=searchModel.Director, scenario=searchModel.Scenario});
         }
@@ -56,13 +56,13 @@ namespace Film.Controllers
             {
                 query = query.Where(c => c.Marks.Count != 0).OrderByDescending(c => c.Marks.Average(m => m.MarkValue));
             }
-
+            
            // var data = query;
            var data = query.ToList();
             return View(data);
         }
 
-        public ActionResult Filter(string[] selectedCategories)
+        public ActionResult Filter(string[] selectedCategories)//2 tests
         {
             return RedirectToAction("Index", new {selectedCategories = selectedCategories});
         }
@@ -74,7 +74,7 @@ namespace Film.Controllers
         }
 
         [HttpPost]
-        public ActionResult CreateComment(Comment comment)
+        public ActionResult CreateComment(Comment comment)//test
         {
             int filmId = Convert.ToInt32(TempData["FilmId"]);
             if (ModelState.IsValid)
@@ -119,7 +119,7 @@ namespace Film.Controllers
             return View(product);
         }
 
-        public async Task<ActionResult> PutMark(Mark mark)
+        public async Task<ActionResult> PutMark(Mark mark)//test
         {
             int filmId = Convert.ToInt32(TempData["FilmId"]);
             if (filmId != 0)
