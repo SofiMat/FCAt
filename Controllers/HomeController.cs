@@ -82,7 +82,7 @@ namespace Film.Controllers
                 comment.Date = DateTime.Now;
                 comment.UserName = User.Identity.Name;
               
-                Movie film = _applicationDbContext.Films.Find(filmId);
+                Movie film = _applicationDbContext.Films.FirstOrDefault(f => f.Id == filmId);
                 comment.Film = film;
 
                 _applicationDbContext.Comments.Add(comment);
@@ -133,7 +133,6 @@ namespace Film.Controllers
                         Mark m = _applicationDbContext.Marks.Include(c => c.Film).FirstOrDefault(c => c.FilmId == filmId && c.UserId == user.Id);
                         m.MarkValue = mark.MarkValue;
                         m.UserName = user.Email;
-                        _applicationDbContext.SaveChanges();
                     }
                     else
                     {
@@ -142,8 +141,8 @@ namespace Film.Controllers
                         mark.Film = film;
                         mark.UserName = user.Email;
                         _applicationDbContext.Marks.Add(mark);
-                        _applicationDbContext.SaveChanges();
                     }
+                    _applicationDbContext.SaveChanges();
                 }
             }
 
