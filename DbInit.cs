@@ -94,6 +94,10 @@ namespace Film
                 new Category
                 {
                     Name = "Документальний"
+                },
+                new Category
+                {
+                    Name = "Анімаційний"
                 }
             };
 
